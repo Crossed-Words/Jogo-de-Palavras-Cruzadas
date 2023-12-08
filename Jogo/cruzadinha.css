@@ -1,41 +1,37 @@
-.white1 {
-    border: 2px solid white;
-    width: 30px;
-    align-items: center;
-    justify-content: center;
-    /* display: flex; */
-    height: 30px;
-    padding: 7px;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 9.5vh;
 }
 
-.background-cruzadinha{
-    display: flex;
-    
-    width: 50%;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5.4px;
-    border-radius: 20px;
-    border: 3px solid white;
-    backdrop-filter: blur(30px);
-    
+html::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
 }
-/* ..background-cruzadinha .tabel {
 
-} */
+html::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://w.forfun.com/fetch/54/5444e446e1e3ca20a5aa5471b24d981b.jpeg);
+    background-image: linear-gradient(80deg, #00ADEF, #08326d 50%);
     min-height: 100vh;
     width: 100%;
     background-position: center;
     background-size: cover;
     margin: 0;
     color: white;
+    font-size: 24px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 input {
     width: 30%;
     display: flex;
@@ -45,36 +41,60 @@ input {
     padding: 7px;
     border: none;
 }
-.interation{
+
+.white1 {
+    border: 2px solid white;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 14px;
+}
+
+#background-cruzadinha {
+    display: none;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5.4px;
+    border-radius: 20px;
+    border: 3px solid white;
+    backdrop-filter: blur(30px);
+}
+
+.interation {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+
 .input {
     display: flex;
     width: 100%;
     justify-content: center;
 }
+
 .button {
     width: 20%;
     display: flex;
     width: 100%;
     justify-content: center;
-    
 }
+
 button:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
     cursor: pointer;
-    background-color:#000;
+    background-color: #000;
     color: #fff;
 }
 
-.tips span{
+.tips span {
     display: flex;
     align-items: center;
     text-align: justify;
 }
+
 button {
     width: 20%;
     height: 40px;
@@ -85,4 +105,32 @@ button {
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+}
+
+h5 {
+    font-size: 36px;
+}
+
+#introduction {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    width: 80%;
+    gap: 50px;
+    height: auto;
+}
+
+#introduction h1{
+    font-size:80px ;
+}
+
+#introduction span{
+    font-size:40px ;
+}
+
+#introduction button{
+    height: 130px;
+    font-size:40px ;
 }

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palavra Cruzada</title> 
+    <title>Crossed-Words</title>
     <link rel="icon" href="assets/imgs/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="cruzadinha.css">
 </head>
 
 <body>
-    <div class="background-cruzadinha">
+    <div id="background-cruzadinha">
         <table class="table1">
             <tr>
                 <td class="white2"></td>
@@ -257,40 +257,74 @@
                 <input type="text" id="input1" placeholder="Digite aqui a palavra abaixo">
             </div> <br>
             <div class="button">
-            <button onclick="submit1()">Verificar</button>
+                <button onclick="submit1()">Verificar</button>
+            </div>
         </div>
-        </div>
-        <div class="tips" > 
+        <div class="tips">
             <h5>Dicas:</h5>
-            <span>1.Unidades de execução em um processo, permitindo tarefas simultâneas. Exemplo: Um navegador pode usar para carregar páginas e responder a interações do usuário ao mesmo tempo.</span><br><br>
+            <span>1.Unidades de execução em um processo, permitindo tarefas simultâneas. Exemplo: Um navegador pode usar
+                para carregar páginas e responder a interações do usuário ao mesmo tempo.</span><br><br>
 
-            <span>2.Unidades de armazenamento na CPU para dados temporários, permitindo operações rápidas. Localizam-se internamente à CPU.</span><br><br>
+            <span>2.Unidades de armazenamento na CPU para dados temporários, permitindo operações rápidas. Localizam-se
+                internamente à CPU.</span><br><br>
 
-            <span>3.A arquitetura deste processador é fabricada pela Intel, começou em setembro de 2009.Apresentam múltiplos núcleos, tecnologia Hyper-Threading em alguns modelos, cache L3, e são projetados para proporcionar um equilíbrio entre desempenho e eficiência energética em computadores pessoais.</span><br><br>
+            <span>3.A arquitetura deste processador é fabricada pela Intel, começou em setembro de 2009.Apresentam
+                múltiplos núcleos, tecnologia Hyper-Threading em alguns modelos, cache L3, e são projetados para
+                proporcionar um equilíbrio entre desempenho e eficiência energética em computadores
+                pessoais.</span><br><br>
 
-            <span>4.Transfere dados entre componentes em computadores, determinado pela largura em bits. Facilita a interação entre CPU, memória e dispositivos.</span><br><br>
+            <span>4.Transfere dados entre componentes em computadores, determinado pela largura em bits. Facilita a
+                interação entre CPU, memória e dispositivos.</span><br><br>
 
-            <span>5.Processadores com quatro núcleos independentes para execução eficiente de tarefas simultâneas, como o Intel Core i7-7700K e o AMD Ryzen 5 3600.</span><br><br>
+            <span>5.Processadores com quatro núcleos independentes para execução eficiente de tarefas simultâneas, como
+                o Intel Core i7-7700K e o AMD Ryzen 5 3600.</span><br><br>
 
-            <span>6.Componente principal de um computador responsável por executar instruções de programas e realizar operações de processamento de dados.</span><br><br>
+            <span>6.Componente principal de um computador responsável por executar instruções de programas e realizar
+                operações de processamento de dados.</span><br><br>
 
             <span>7.Componente da CPU que realiza operações lógicase aritméticas.</span><br><br>
 
-            <span>8.Sinal em eletrônica digital para escolher um dispositivo em um barramento compartilhado, indicando que o dispositivo deve responder, permitindo o controle seletivo.</span><br><br>
+            <span>8.Sinal em eletrônica digital para escolher um dispositivo em um barramento compartilhado, indicando
+                que o dispositivo deve responder, permitindo o controle seletivo.</span><br><br>
 
-            <span>9.Utilizada para armazenar dados temporariamente e reduzir o tempo de acesso à memória principal, aumentando a velocidade de execução do processador.</span><br><br>
+            <span>9.Utilizada para armazenar dados temporariamente e reduzir o tempo de acesso à memória principal,
+                aumentando a velocidade de execução do processador.</span><br><br>
 
-            <span>10.Permite transferência direta entre periféricos e memória, sem envolvimento constante da CPU, melhorando a eficiência do sistema.</span><br><br>
+            <span>10.Permite transferência direta entre periféricos e memória, sem envolvimento constante da CPU,
+                melhorando a eficiência do sistema.</span><br><br>
 
-            <span>11.Utilizada em dispositivos eletrônicos para armazenamento, sendo rápida, durável e eficiente energeticamente, comum em cartões de memória e SSDs.</span><br><br>   
+            <span>11.Utilizada em dispositivos eletrônicos para armazenamento, sendo rápida, durável e eficiente
+                energeticamente, comum em cartões de memória e SSDs.</span><br><br>
         </div>
+    </div>
+
+    <div id="introduction">
+        <h1>Seja Bem- Vindo ao Jogo Crossed-Words</h1>
+        <span>
+            Desafie seus conhecimentos em arquitetura de computadores com nosso emocionante jogo de palavras cruzadas!
+            Envolva-se nesse quebra-cabeça educativo, testando sua habilidade em conectar os pontos-chave da arquitetura
+            de computadores. Uma maneira divertida e estimulante de aprimorar seu vocabulário técnico enquanto desvenda
+            os segredos dos componentes fundamentais que impulsionam a era digital!
+        </span>
+        <button onclick="entrar()">
+            Vamos Lá
+        </button>
     </div>
 </body>
 
 </html>
 
 <script>
-    var list1 = ['THREADS', 'REGISTRADORES', 'I5', 'DATA BUS', 'QUAD CORE', 'CPU', 'ULA', 'CS', 'CACHE', 'DMA', 'FLASH']
+    var list1 = ['THREADS', 'REGISTRADORES', 'I5', 'DATA BUS', 'QUAD CORE', 'CPU', 'ULA', 'CS', 'CACHE', 'DMA', 'FLASH'];
+    var cruzadinha = document.getElementById("background-cruzadinha");
+    var cruzadona = document.getElementById("introduction");
+    var pontos = 0;
+
+    function entrar() {
+        cruzadinha.style.display = "flex";
+        cruzadona.style.display = "none";
+
+    }
 
     function submit1() {
         var enterWord = input1.value.toUpperCase();
@@ -302,9 +336,11 @@
             a19.innerHTML = 'A';
             a21.innerHTML = 'D';
             a25.innerHTML = 'S';
-            
-        } 
-        if (enterWord == list1[1]) {
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
+        }
+
+        else if (enterWord == list1[1]) {
             a3.innerHTML = 'R';
             a4.innerHTML = 'E';
             a5.innerHTML = 'G';
@@ -318,12 +354,16 @@
             a13.innerHTML = 'R';
             a14.innerHTML = 'E';
             a15.innerHTML = 'S';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
-        if (enterWord == list1[2]) {
+        else if (enterWord == list1[2]) {
             a6.innerHTML = 'I';
             a16.innerHTML = '5';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
-        if (enterWord == list1[3]) {
+        else if (enterWord == list1[3]) {
             a11.innerHTML = 'D';
             a18.innerHTML = 'A';
             a20.innerHTML = 'T';
@@ -331,8 +371,10 @@
             a30.innerHTML = 'B';
             a34.innerHTML = 'U';
             a42.innerHTML = 'S';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
-        if (enterWord == list1[4]) {
+        else if (enterWord == list1[4]) {
             a23.innerHTML = 'Q';
             a28.innerHTML = 'U';
             a32.innerHTML = 'A';
@@ -341,45 +383,65 @@
             a46.innerHTML = 'O';
             a47.innerHTML = 'R';
             a48.innerHTML = 'E';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
 
-        if (enterWord == list1[5]) {
+        else if (enterWord == list1[5]) {
             a26.innerHTML = 'C';
             a27.innerHTML = 'P';
             a28.innerHTML = 'U';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
 
-        if (enterWord == list1[6]) {
+        else if (enterWord == list1[6]) {
             a29.innerHTML = 'U';
             a33.innerHTML = 'L';
             a38.innerHTML = 'A';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
 
-        if (enterWord == list1[7]) {
+        else if (enterWord == list1[7]) {
             a24.innerHTML = 'C';
             a25.innerHTML = 'S';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
 
-        if (enterWord == list1[8]) {
+        else if (enterWord == list1[8]) {
             a26.innerHTML = 'C';
             a31.innerHTML = 'A';
             a35.innerHTML = 'C';
             a43.innerHTML = 'H';
             a44.innerHTML = 'E';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
 
-        if (enterWord == list1[9]) {
+        else if (enterWord == list1[9]) {
             a36.innerHTML = 'D';
             a37.innerHTML = 'M';
             a38.innerHTML = 'A';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
         }
 
-        if (enterWord == list1[10]) {
+        else if (enterWord == list1[10]) {
             a39.innerHTML = 'F';
             a40.innerHTML = 'L';
             a41.innerHTML = 'A';
             a42.innerHTML = 'S';
             a43.innerHTML = 'H';
+            pontos++;
+            alert(`Parabéns Você acertou a palavra!`)
+        }
+        else {
+            alert(`A palavra ${enterWord} não existe em nosso jogo ! Leia a Dica novamente`);
+        }
+        if (pontos == 11) {
+            alert("Parabéns Você acabou de completar a cruzadinha! Se hoje for sexta e você estiver tendo aula de Arq.comp vá para o Bovinus!!");
         }
     }
 </script>
