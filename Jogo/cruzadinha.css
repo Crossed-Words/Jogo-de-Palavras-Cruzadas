@@ -1,0 +1,88 @@
+.white1 {
+    border: 2px solid white;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+    height: 30px;
+    padding: 7px;
+}
+
+.background-cruzadinha{
+    display: flex;
+    
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5.4px;
+    border-radius: 20px;
+    border: 3px solid white;
+    backdrop-filter: blur(30px);
+    
+}
+/* ..background-cruzadinha .tabel {
+
+} */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://w.forfun.com/fetch/54/5444e446e1e3ca20a5aa5471b24d981b.jpeg);
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+input {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    padding: 7px;
+    border: none;
+}
+.interation{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.input {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.button {
+    width: 20%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+}
+button:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color:#000;
+    color: #fff;
+}
+
+.tips span{
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+button {
+    width: 20%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
