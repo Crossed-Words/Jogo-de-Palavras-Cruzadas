@@ -44,6 +44,7 @@ input {
 
 .white1 {
     border: 2px solid white;
+    border-radius: 30px;
     width: 30px;
     align-items: center;
     justify-content: center;
